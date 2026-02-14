@@ -1,0 +1,38 @@
+[package]
+name = "deadbolt"
+version = "1.0.0"
+edition = "2021"
+authors = ["eneswritescode"]
+description = "Post-Quantum file encryption CLI using Kyber (ML-KEM) and AES-GCM"
+
+[dependencies]
+# Post-Quantum Cryptography - Kyber KEM (NIST ML-KEM standard)
+pqc_kyber = "0.7.1"
+
+# Symmetric encryption (AEAD) - used for actual file encryption
+aes-gcm = "0.10.3"
+
+# CLI argument parsing
+clap = { version = "4.5", features = ["derive"] }
+
+# GUI framework (Iced - reactive UI)
+iced = { version = "0.12", features = ["tokio"] }
+
+# Native file dialogs
+rfd = "0.14"
+
+# Error handling
+anyhow = "1.0"
+
+# Random number generation for keypair generation
+rand = "0.8"
+
+[build-dependencies]
+# Windows icon embedding
+winres = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
