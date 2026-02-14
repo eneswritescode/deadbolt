@@ -72,12 +72,19 @@ Deadbolt uses **Kyber-1024** (CRYSTALS-Kyber), a lattice-based Key Encapsulation
 
 ## 🚀 Installation
 
-### Prerequisites
-- Rust 1.70+ ([Install Rust](https://rustup.rs/))
+### 📦 Pre-built Binaries (Windows)
 
-### Build from Source
+Download the latest release for Windows:
+- **[deadbolt-v1.0.0-windows-x64.exe](https://github.com/eneswritescode/deadbolt/releases)** (9 MB)
+
+No installation needed - just download and run!
+
+### 🛠️ Build from Source (All Platforms)
+
+**Prerequisites:** Rust 1.70+ ([Install Rust](https://rustup.rs/))
+
 ```bash
-git clone https://github.com/yourusername/deadbolt.git
+git clone https://github.com/eneswritescode/deadbolt.git
 cd deadbolt
 cargo build --release
 ```
