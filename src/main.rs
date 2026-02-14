@@ -2,6 +2,7 @@
 //  Deadbolt - Post-Quantum File Encryption
 //  Supports both CLI and GUI modes
 // ═══════════════════════════════════════════════════════════
+#![cfg_attr(target_os = "windows", windows_subsystem = "windows")]
 
 mod crypto;
 mod gui;
@@ -266,3 +267,4 @@ fn cmd_unlock(file_path: PathBuf, privkey_path: PathBuf, output: Option<PathBuf>
     
     Ok(())
 }
+
